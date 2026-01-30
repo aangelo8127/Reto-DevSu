@@ -14,7 +14,7 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./BaseDatos.sql:/docker-entrypoint-BaseDatosdb.d/BaseDatos.sql
     networks:
       - devsu_network
     healthcheck:
