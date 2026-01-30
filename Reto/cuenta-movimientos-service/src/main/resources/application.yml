@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: cuenta-movimientos-service
+  datasource:
+    url: jdbc:mysql://mysql:3306/devsu_db
+    username: devsu_user
+    password: devsu_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+
+server:
+  port: 8082
+  servlet:
+    context-path: /
+
+logging:
+  level:
+    root: INFO
+    org.devsu.com: DEBUG
